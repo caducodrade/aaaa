@@ -1,4 +1,5 @@
 var Conta = require('./Conta.js');
+var Poupanca = require('./Poupanca.js');
 
 var Poupanca = function(){
     this.aniversario = new Date('2020-03-11');
@@ -7,13 +8,14 @@ var Poupanca = function(){
 }
 
 Poupanca.prototype.Rende = function(){
-    if(this.aniversario.getDay() ==  this.dataAtual.getDay() && this.aniversario.getMonth() ==  this.dataAtual.getMonth() ){
+    if(this.aniversario.getDay() ==  this.dataAtual.getDay()){
         return this.saldo = this.saldo + (this.saldo * this.rendimento)/100;
     }
 }   
-//Define a classe conta
+
+//Define a classe Poupança
 function Poupanca(){
-    CredentialsContainer.call(this);
+    Conta.call(this);
 }
 
 //Herda a classe Conta
