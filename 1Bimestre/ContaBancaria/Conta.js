@@ -15,8 +15,14 @@ Conta.prototype.comparaSenha = function(senha){
     }
 }   
 
+Conta.prototype.getSaldo = function(){
+    console.log('Seu saldo pe de ' + this.saldo);
+    return this.saldo;
+}
+
 Conta.prototype.deposito = function(valor){
     this.saldo = this.saldo + valor;
+    console.log('Você depositou '+valor);
 }
 
 Conta.prototype.saque = function(valor){
