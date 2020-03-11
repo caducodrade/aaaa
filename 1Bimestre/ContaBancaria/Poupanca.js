@@ -1,5 +1,4 @@
 var Conta = require('./Conta.js');
-var Poupanca = require('./Poupanca.js');
 
 var Poupanca = function(){
     this.aniversario = new Date('2020-03-11');
@@ -7,9 +6,10 @@ var Poupanca = function(){
     this.dataAtual = new Date()
 }
 
-Poupanca.prototype.Rende = function(){
+Poupanca.prototype.rende = function(){
     if(this.aniversario.getDay() ==  this.dataAtual.getDay()){
         return this.saldo = this.saldo + (this.saldo * this.rendimento)/100;
+        return this.saldo;
     }
 }   
 
@@ -20,8 +20,5 @@ function Poupanca(){
 
 //Herda a classe Conta
 Poupanca.prototype = new Conta();
-
-//correige o ponteiro construto, para aponbtar para a poupanca
-Poupanca.prototype.constructor = Poupanca;
 
 module.exports  = Poupanca;
