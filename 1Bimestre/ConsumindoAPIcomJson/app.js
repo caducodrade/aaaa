@@ -11,7 +11,7 @@ Exemplo de pesquisa por CEP:
 viacep.com.br/ws/01001000/json/ 
 */
 //informe o seu cep aqui
-var cep = '86080090';
+var cep = '86090020';
 
 request('http://viacep.com.br/ws/'+ cep +'/json/', function (error, response, body) {
   console.log('error:', error); // Print o erro que ocorreu
@@ -29,7 +29,7 @@ request('http://viacep.com.br/ws/'+ cep +'/json/', function (error, response, bo
     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
     var parsedWeather = JSON.parse(body);
     //console.log(body);
-    console.log('A temperatura atual em '+ cidade +' é ' + parsedWeather['main']['temp']/10); // Print the Temperature in the city of São Paulo
+    console.log('A temperatura atual em '+ cidade +' é ' + parsedWeather['main']['temp']/10); // Print the Temperature in the city of Londrina
   });
 
 });
