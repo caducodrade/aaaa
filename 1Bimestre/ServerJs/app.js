@@ -17,8 +17,9 @@ const server = http.createServer((req, res) => {
      //http://127.0.0.1:8080/
      res.statusCode = 200;
 
-    //seta o Cabeçario // 
+    //seta o Cabeçario //
     res.setHeader('Content-Type', 'text/html; charset=UTF-8');
+    
     res.write(data);
     //informe o seu cep aqui
     var cep = '86183877';
@@ -39,6 +40,7 @@ const server = http.createServer((req, res) => {
       '\n Rua: '  +  data.logradouro +
       '\n cidade:'  +  data.localidade +'  '+ data.uf+
       '\n');
+   
     });
   });
 });
