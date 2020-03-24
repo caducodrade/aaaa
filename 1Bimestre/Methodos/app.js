@@ -1,3 +1,8 @@
+//npm install express
+//npm install nodemon
+//atualizar o packge.json 
+//abaixo da linha test, dentro do methodo Script acresentar o comando abaixo
+//"Methodos" : "nodemon Methodos/app.js"
 const express = require('express')
 const app = express();
 const port = 3000;
