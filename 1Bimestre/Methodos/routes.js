@@ -24,15 +24,15 @@ routes.get('/users', (req, res) =>{
 //Formulario de login e senha  por exemplo
 // vai enviar o login e a senha no corpo da requisição
 routes.post('/users', (req, res) => {
-    return res.json(req.body);
+    return res.json(req.body); 
 });
 
 //Mehodo PUT é usado para fazer o update para atualizar os dados do banco de dados
 // localhost:3000/users/5
 routes.put('/users/:id', (req, res) =>{
     return res.json({
-        id   : res.params.id,
-        body : res.params.body
+        id   : req.params.id,
+        body : req.body
     });
 });
 
