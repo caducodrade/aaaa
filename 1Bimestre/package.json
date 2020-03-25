@@ -5,11 +5,12 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "Methodos" : "nodemon Methodos/app.js"
+    "Methodos": "nodemon Methodos/app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "routes": "^2.1.0"
   }
 }
