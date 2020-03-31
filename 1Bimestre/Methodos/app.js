@@ -5,10 +5,18 @@
 //"Methodos" : "nodemon Methodos/app.js"
 const express = require('express');
 const routes = require('./routes');
+const mongoose = require('mongoose');
 
 const app = express();
 const port = 3000;
 const hostname = "127.0.0.1";
+
+mongoose.connect('mongodb+srv://Hericson:<passs>@cluster0-mhxlq.mongodb.net/Biqueirssa?retryWrites=true&w=majority',
+{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
 
 app.use(express.json());
 app.use(routes);
