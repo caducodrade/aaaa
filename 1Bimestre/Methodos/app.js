@@ -11,17 +11,15 @@ const app = express();
 const port = 3000;
 const hostname = "127.0.0.1";
 
-mongoose.connect('mongodb+srv://Hericson:<passs>@cluster0-mhxlq.mongodb.net/Biqueirssa?retryWrites=true&w=majority',
+//Acessar site da Atlas Mongo DB - Criar uma conta e criar um cluster Free 
+mongoose.connect('mongodb+srv://Hericson:tads2020@cluster0-mhxlq.mongodb.net/Biqueira?retryWrites=true&w=majority',
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
-
 app.use(express.json());
 app.use(routes);
-
-//Acessar site da Atlas Mongo DB - Criar uma conta e criar um cluster Free 
 
 //imprime no console qua a porta e qual o server que esta rodando aaplicação
 app.listen(port, hostname,()=>{

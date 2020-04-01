@@ -14,13 +14,16 @@ routes.get('/',function(req, res){
     res.send("Hello word");
 })
 
-//este exemplo de get onde traz um usuario com base no id passado
-routes.get('/users/:id', UserController.show);
+
+
 
 //Get => Buscar info -- Select para listagem de infos
 //req.query = acessar a query ou params (filtros)
 //localhost:3000/?idade=37&sexo=M
-routes.get('/users',UserController.index);
+routes.get('/users', UserController.index);
+
+//este exemplo de get onde traz um usuario com base no id passado
+routes.get('/users/:id', UserController.show);
 
 //Methodo POST // Create -- Gravação
 //Formulario de login e senha  por exemplo
