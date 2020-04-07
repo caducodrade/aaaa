@@ -44,7 +44,6 @@ module.exports = {
     user.senha = "senha123456";
     //atualiza os dados no banco
     user = await User.update(user);
-
     return res.json(user);
   },
 

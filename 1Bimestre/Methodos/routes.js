@@ -1,6 +1,6 @@
 const express = require('express');
 const routes = express.Router();
-const UserController = require('./Controller/User')
+const UserController = require('./Controller/User');
 
 //Index =Listagem 
 //Show = Visualizar os dados gravados
@@ -12,10 +12,7 @@ const UserController = require('./Controller/User')
 //este exemplo completo de uma reuqisição simples
 routes.get('/',function(req, res){
     res.send("Hello word");
-})
-
-
-
+});
 
 //Get => Buscar info -- Select para listagem de infos
 //req.query = acessar a query ou params (filtros)
